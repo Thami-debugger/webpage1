@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velaphi Nkosi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery for interactivity -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Velaphi Nkosi</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/cv" target="_blank">Download CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Landing Page with Introduction -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Professional Portfolio</h1>
+            <p>Driven by innovation, technology, and problem-solving. Explore more about my journey and projects.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section fade-in">
+        <h2>About Me</h2>
+        <p>I am a passionate individual with a background in biological sciences and a focus on innovation. I strive to apply my skills in data analysis, problem-solving, and technology to drive impactful solutions.</p>
+        <a href="#" class="expand-btn">Read More</a>
+        <div class="expand-content">
+            <p>Currently pursuing a Postgraduate Diploma in Science Innovation and Entrepreneurship. I am dedicated to continuous learning and contributing to digital solutions that solve real-world problems.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="content-section fade-in">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <h3>Queue Management System</h3>
+            <p>Collaborated on developing a queue management system using data analysis to optimize service delivery.</p>
+        </div>
+        <div class="project-item">
+            <h3>Data Analysis Dashboard</h3>
+            <p>Built an interactive Power BI dashboard for data visualization and decision-making.</p>
+        </div>
+        <a href="#" class="expand-btn">View More Projects</a>
+        <div class="expand-content">
+            <p>Future projects include exploring AI and machine learning algorithms for process automation and efficiency improvement.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section fade-in">
+        <h2>Contact</h2>
+        <p>Feel free to get in touch with me for collaborations, inquiries, or networking.</p>
+        <ul class="contact-list">
+            <li>Email: <a href="mailto:nkosivelaphi81@gmail.com">nkosivelaphi81@gmail.com</a></li>
+            <li>Phone: 0630208227 / 0818232670</li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/velaphi-nkosi-03b6621a9" target="_blank">LinkedIn</a></li>
+            <li>GitHub: <a href="https://github.com/Thami-debugger" target="_blank">GitHub</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Designed by Velaphi Nkosi</p>
+    </footer>
+
+    <script>
+        // Smooth Scrolling for navigation
+        $('a').click(function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 800);
+            }
+        });
+
+        // Expand sections when clicking 'Read More' or 'View More Projects'
+        $(".expand-btn").click(function(e) {
+            e.preventDefault();
+            $(this).next(".expand-content").slideToggle();
+        });
+
+        // Fade-in effect when scrolling into view
+        $(window).scroll(function() {
+            $('.fade-in').each(function() {
+                var elementTop = $(this).offset().top;
+                var windowBottom = $(window).scrollTop() + $(window).height();
+                if (windowBottom > elementTop + 100) {
+                    $(this).addClass('visible');
+                }
+            });
+        });
+
+        // Trigger fade-in effect initially
+        $(window).trigger('scroll');
+    </script>
+</body>
+</html>
