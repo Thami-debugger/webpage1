@@ -1,141 +1,149 @@
-/* Reset some default styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and Page Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #222; /* Dark Gray */
-    color: white;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    text-align: center; /* Center text globally */
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
-/* Navigation Bar */
-.navbar {
-    background-color: #111;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-}
-
-.navbar .nav-container {
+/* Center Sections */
+section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 0 20px;
+    padding: 30px;
+    margin: 0 auto;
+    width: 80%; /* Optional: restrict the content width for better readability */
 }
 
-.navbar .logo {
-    font-size: 1.8em;
-    font-weight: bold;
+/* Headings */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.nav-links {
-    list-style-type: none;
+/* Navigation */
+header nav ul {
+    list-style: none;
+    text-align: center;
+    background-color: #333;
+    padding: 10px 0;
 }
 
-.nav-links li {
+header nav ul li {
     display: inline;
-    margin-left: 20px;
+    margin: 0 10px;
 }
 
-.nav-links a {
-    font-size: 1.1em;
-    color: #ccc;
-}
-
-.nav-links a:hover {
-    color: #fff;
+header nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* Hero Section */
 .hero {
-    background: #333 url('background.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    background-color: #555;
+    color: white;
+    padding: 60px 20px;
+    width: 100%; /* Ensure full-width background */
 }
 
 .hero h1 {
-    font-size: 3em;
-    color: white;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1.2em;
-    color: #ddd;
-    margin-bottom: 30px;
+    margin: 10px 0;
 }
 
-.btn {
-    padding: 10px 30px;
-    background-color: #444;
-    border-radius: 5px;
-    color: white;
-    font-size: 1.1em;
+/* Section Styling */
+.section-grey {
+    background-color: #eaeaea;
+    width: 100%; /* Full-width background */
+    padding: 30px 0; /* Adjust padding for a better look */
 }
 
-.btn:hover {
-    background-color: #555;
+.section-lightgrey {
+    background-color: #f8f8f8;
+    width: 100%; /* Full-width background */
+    padding: 30px 0;
 }
 
-/* Section Styles */
-.content-section {
-    padding: 50px 20px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 1s ease-out;
-}
-
-.content-section.visible {
-    opacity: 1;
-}
-
-.content-section h2 {
-    font-size: 2.5em;
+/* Project Section */
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-.content-section p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+.project img {
+    width: 80%; /* Adjust image width for better appearance */
+    object-fit: cover;
+    border-radius: 5px; /* Optional: rounded corners for images */
+    margin-bottom: 10px;
 }
 
-.expand-btn {
-    background-color: #555;
-    padding: 10px 20px;
+.project-details {
+    padding: 10px;
+    max-width: 600px; /* Restrict width for readability */
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    background-color: #333;
     color: white;
+    padding: 10px 15px;
+    margin: 10px 0;
+    text-decoration: none;
+    font-weight: bold;
     border-radius: 5px;
-    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.expand-btn:hover {
-    background-color: #666;
-}
-
-.expand-content {
-    display: none;
+.cv-download {
     margin-top: 20px;
+    background-color: #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%; /* Center and restrict the width of the box */
+    margin: 20px auto; /* Center horizontally */
 }
 
 /* Footer */
 footer {
-    background-color: #111;
-    color: white;
-    padding: 20px 0;
     text-align: center;
-    margin-top: 40px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+/* List Styling */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    text-align: left; /* Align the points to the left */
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: "• "; /* Adding bullet points */
+    color: #333; /* Bullet color */
 }

@@ -1,109 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velaphi Nkosi</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery for interactivity -->
+    <title>Velaphi Nkosi | Personal Portfolio</title>
+    <link rel="stylesheet" href="static/styles.css">
 </head>
+
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Velaphi Nkosi</a>
-            <ul class="nav-links">
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Welcome</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#volunteer">Volunteer</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="/cv" target="_blank">Download CV</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Landing Page with Introduction -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to My Professional Portfolio</h1>
-            <p>Driven by innovation, technology, and problem-solving. Explore more about my journey and projects.</p>
-            <a href="#about" class="btn">Learn More</a>
-        </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <h1>Welcome to <span class="highlight">Velaphi Nkosi's Portfolio</span></h1>
+        <p>Innovative Science and Technology Enthusiast</p>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="content-section fade-in">
+    <section id="about" class="section-grey">
         <h2>About Me</h2>
-        <p>I am a passionate individual with a background in biological sciences and a focus on innovation. I strive to apply my skills in data analysis, problem-solving, and technology to drive impactful solutions.</p>
-        <a href="#" class="expand-btn">Read More</a>
-        <div class="expand-content">
-            <p>Currently pursuing a Postgraduate Diploma in Science Innovation and Entrepreneurship. I am dedicated to continuous learning and contributing to digital solutions that solve real-world problems.</p>
-        </div>
+        <p>
+            <b>Passionate about creating impactful solutions</b> and thriving in dynamic environments.
+        </p>
+        <p>
+            Proficient in <b>Python, SQL</b>, and <b>Power BI</b>, I specialize in  leveraging data analysis, and technology to develop innovative,impactful solutions
+            while thriving in dynamic and collaborative environments.
+        </p>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="content-section fade-in">
-        <h2>Projects</h2>
-        <div class="project-item">
-            <h3>Queue Management System</h3>
-            <p>Collaborated on developing a queue management system using data analysis to optimize service delivery.</p>
-        </div>
-        <div class="project-item">
-            <h3>Data Analysis Dashboard</h3>
-            <p>Built an interactive Power BI dashboard for data visualization and decision-making.</p>
-        </div>
-        <a href="#" class="expand-btn">View More Projects</a>
-        <div class="expand-content">
-            <p>Future projects include exploring AI and machine learning algorithms for process automation and efficiency improvement.</p>
-        </div>
+    <!-- Education Section -->
+    <section id="education" class="section-lightgrey">
+        <h2>Education</h2>
+        <p>
+            <b>Postgraduate Diploma in Science Innovation and Entrepreneurship</b><br>
+            <i>University of the Witwatersrand, 2024–Present</i>
+        </p>
+        <p>
+            <b>Bachelor of Science degree</b> in Biological Sciences<br>
+            <i>University of the Witwatersrand, 2020–2023</i>
+        </p>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="content-section fade-in">
-        <h2>Contact</h2>
-        <p>Feel free to get in touch with me for collaborations, inquiries, or networking.</p>
-        <ul class="contact-list">
-            <li>Email: <a href="mailto:nkosivelaphi81@gmail.com">nkosivelaphi81@gmail.com</a></li>
-            <li>Phone: 0630208227 / 0818232670</li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/velaphi-nkosi-03b6621a9" target="_blank">LinkedIn</a></li>
-            <li>GitHub: <a href="https://github.com/Thami-debugger" target="_blank">GitHub</a></li>
+    <!-- Professional Experience -->
+    <section id="experience" class="section-grey">
+        <h2>Experience</h2>
+        <p>
+            <b>Administration Assistance</b> – University of Witwatersrand (2024)
+        </p><br>
+        <ul>
+            <li>Assisted with student registrations, providing guidance while strengthening<b>communication and teamwork skills.</b>.</li>
+            <li> Developed skills in identifying <b>student needs</b>, and offering appropriate referrals</li>
         </ul>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="section-lightgrey">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="static/images/project1.png" alt="QUEUE MANAGEMENT Project">
+            <div class="project-details">
+                <h3>Queue Management – WCCO</h3>
+                <p>
+                    Utilized Python for basic data automation tasks, gaining hands-on experience with problem-solving in a 
+                    practical setting.
+                </p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="static/images/Project 2.png" alt="Bitcoin Predicting Model">
+            <div class="project-details">
+                <h3>Predicting – Analysing Bitcoin</h3>
+                <p>
+                    Developed models to predict bitcoin price for over the next 30 days.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section-grey">
+        <h2>Certificates</h2>
+        <ul>
+            <li><b>Diploma in Computer Science</b> – Upskills</li>
+            <li><b>Artificial Intelligence Fundamentals</b> – IBM</li>
+            <li><b>Data Fundamentals</b> – IBM</li>
+        </ul>
+    </section>
+
+    <!-- Volunteer Section -->
+    <section id="volunteer" class="section-lightgrey">
+        <h2>Volunteer Work</h2>
+        <p>
+            <b>WCCO</b> – Helping students with basic needs
+        </p>
+        <p>
+            Managed food logistics and supported community initiatives, mentorship,strengthening teamwork and communication skills.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-grey">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:nkosivelaphi81@gmail.com">nkosivelaphi81@gmail.com</a></p>
+        <p>Phone: 0630208227 / 0818232670</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/velaphi-nkosi-03b6621a9" target="_blank">linkedin.com/in/velaphi-nkosi-03b6621a9</a></p>
+        <div class="cv-download">
+            <a href="static/Velaphi Nkosi CV.pdf" class="btn" download>Download CV</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>Designed by Velaphi Nkosi</p>
+        <p>&copy; 2024 Velaphi Nkosi | All Rights Reserved</p>
     </footer>
-
-    <script>
-        // Smooth Scrolling for navigation
-        $('a').click(function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 800);
-            }
-        });
-
-        // Expand sections when clicking 'Read More' or 'View More Projects'
-        $(".expand-btn").click(function(e) {
-            e.preventDefault();
-            $(this).next(".expand-content").slideToggle();
-        });
-
-        // Fade-in effect when scrolling into view
-        $(window).scroll(function() {
-            $('.fade-in').each(function() {
-                var elementTop = $(this).offset().top;
-                var windowBottom = $(window).scrollTop() + $(window).height();
-                if (windowBottom > elementTop + 100) {
-                    $(this).addClass('visible');
-                }
-            });
-        });
-
-        // Trigger fade-in effect initially
-        $(window).trigger('scroll');
-    </script>
 </body>
+
 </html>
